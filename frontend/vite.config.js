@@ -9,7 +9,9 @@ export default defineConfig({
     // Get rid of the CORS error
     proxy: {
       "/api": {
-        target: "http://localhost:5000",
+        target:
+          "https://threads-clone-backend.vercel.app/" ||
+          "http://localhost:5000",
         changeOrigin: true,
         secure: false,
       },

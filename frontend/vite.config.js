@@ -9,7 +9,7 @@ export default defineConfig({
     // Get rid of the CORS error
     proxy: {
       "/api": {
-        target: "https://threads-clone-backend.vercel.app/",
+        target: "https://threads-clone-backend.vercel.app",
         changeOrigin: true,
         secure: false,
       },

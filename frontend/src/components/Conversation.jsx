@@ -56,7 +56,7 @@ const Conversation = ({ conversation, isOnline }) => {
         selectedConversation?._id === conversation._id
           ? colorMode === "light"
             ? "gray.400"
-            : "gray.dark"
+            : "white"
           : ""
       }
     >

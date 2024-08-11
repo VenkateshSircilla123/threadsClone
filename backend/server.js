@@ -15,7 +15,7 @@ dotenv.config();
 connectDB();
 job.start();
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 3000;
 const __dirname = path.resolve();
 
 cloudinary.config({
@@ -34,11 +34,7 @@ app.use("/api/users", userRoutes);
 app.use("/api/posts", postRoutes);
 app.use("/api/messages", messageRoutes);
 
-app.get("/", (req, res) => {
-  res.send("Express on Vercel");
-});
-
-// http://localhost:5000 => backend,frontend
+// http://localhost:3000 => backend,frontend
 
 if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "/frontend/dist")));
